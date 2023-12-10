@@ -9,3 +9,93 @@
   list-style-type: none;
   -webkit-tap-highlight-color: transparent;
 }
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --text-color: #f2f2f2;
+  --bg-color: #181a1b;
+  --xl-font-size: 3.2rem;
+  --ml-font-size: 2.4rem;
+  --med-font-size: 1.6rem;
+  --s-font-size: 1.2rem;
+  --xs-font-size: 1rem;
+  --snake-color: #00f;
+  --food-color: #f00;
+}
+
+body {
+  background: url(https://i.ibb.co/1bdzdTz/Background-Image.jpg);
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--text-color);
+}
+
+.scores {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.scores h1 {
+  font-size: var(--ml-font-size);
+  font-weight: 400;
+}
+
+.scores h1 span {
+  font-weight: 600;
+}
+
+.game-container {
+  position: relative;
+  width: 85vw;
+  height: 85vw;
+  max-width: 550px;
+  max-height: 550px;
+  border: 0.5rem solid var(--border-color);
+  border-radius: 0.4rem;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.snake {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--snake-color);
+}
+
+.food {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--food-color);
+}
+
+@media (max-width: 768px) {
+
+  .start-screen {
+    top: 55%;
+    width: 95vw;
+    height: 63vh;
+  }
+  .scores h1 {
+    font-size: var(--med-font-size);
+  }
+
+  .snake,
+  .food {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+}
