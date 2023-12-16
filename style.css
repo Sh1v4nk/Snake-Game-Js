@@ -43,8 +43,8 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 95vw;
-  height: 95vw;
+  width: 90vw;
+  height: 90vw;
   max-width: 600px;
   max-height: 600px;
   z-index: 1;
@@ -57,6 +57,7 @@ body {
 .start-screen img {
   width: 80%;
   max-width: 300px;
+  filter: drop-shadow(1.5px 1.5px 10px #3498db);
   height: auto;
   border-radius: 0.4rem;
   margin-bottom: 0.5rem;
@@ -81,6 +82,7 @@ body {
   font-weight: 500;
   text-align: center;
   cursor: pointer;
+  user-select: none;
   background-color: #3498db;
   color: var(--text-color);
   border-radius: 5px;
@@ -98,7 +100,7 @@ body {
 }
 
 .scores h1 {
-  font-size: var(--ml-font-size);
+  font-size: var(--med-font-size);
   font-weight: 400;
 }
 
