@@ -52,15 +52,27 @@ body {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   padding: 20px;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
 }
 
 .start-screen img {
   width: 80%;
   max-width: 300px;
-  filter: drop-shadow(1.5px 1.5px 10px #3498db);
   height: auto;
   border-radius: 0.4rem;
   margin-bottom: 0.5rem;
+  animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+  10%, 20%, 30%, 40%, 100% {
+    filter: drop-shadow(1.5px 1.5px 10px #3498db);
+  }
+  
+  15%, 25%, 35% {
+    filter: none;
+  }
 }
 
 .start-screen h1 {

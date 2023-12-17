@@ -14,6 +14,10 @@ if (playGame) {
   startBtn.addEventListener("click", startGame);
 }
 
+setTimeout(function() {
+  startScreen.style.transform = 'scale(1)';
+}, 130);
+
 function startGame() {
   startScreen.style.display = "none";
   scores.style.display = "flex";
