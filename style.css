@@ -66,11 +66,17 @@ body {
 }
 
 @keyframes flicker {
-  10%, 20%, 30%, 40%, 100% {
+  10%,
+  20%,
+  30%,
+  40%,
+  100% {
     filter: drop-shadow(1.5px 1.5px 10px #3498db);
   }
-  
-  15%, 25%, 35% {
+
+  15%,
+  25%,
+  35% {
     filter: none;
   }
 }
@@ -87,7 +93,7 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.start-button {
+.start-btn {
   display: inline-block;
   padding: 15px 30px;
   font-size: var(--s-font-size);
@@ -101,22 +107,22 @@ body {
   transition: background-color 0.3s ease-in-out;
 }
 
-.start-button:hover {
+.start-btn:hover {
   background-color: #2980b9;
 }
 
-.scores {
+.score-container {
   display: none;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
 
-.scores h1 {
+.score-container h1 {
   font-size: var(--med-font-size);
   font-weight: 400;
 }
 
-.scores h1 span {
+.score-container h1 span {
   font-weight: 600;
 }
 

@@ -1,6 +1,6 @@
 const startScreen = document.querySelector(".start-screen");
-const startBtn = document.querySelector(".start-button");
-const scores = document.querySelector(".scores");
+const startBtn = document.querySelector(".start-btn");
+const scores = document.querySelector(".score-container");
 const currentScoreDisplay = document.querySelector("#current-score");
 const highScoreDisplay = document.querySelector("#high-score");
 const gameArea = document.querySelector(".game-container");
@@ -21,7 +21,7 @@ setTimeout(function() {
 function startGame() {
   startScreen.style.display = "none";
   scores.style.display = "flex";
-  gameArea.style.display = "block";
+  gameArea.style.display = "grid";
   draw();
 }
 
