@@ -133,7 +133,10 @@ body {
   max-width: 550px;
   max-height: 550px;
   display: none;
-  border: 0.5rem solid var(--border-color);
+  padding: 0.5px;
+  grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(20px, 1fr));
+  border: 3rem solid var(--border-color);
   border-radius: 0.4rem;
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -143,21 +146,15 @@ body {
 }
 
 .snake {
-  position: absolute;
   width: 2rem;
   height: 2rem;
   background-color: var(--snake-color);
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
 }
 
 .food {
-  position: absolute;
   width: 2rem;
   height: 2rem;
   background-color: var(--food-color);
-  right: 50%;
 }
 
 @media (max-width: 768px) {
@@ -182,11 +179,5 @@ body {
   .start-button {
     font-size: 1rem;
     padding: 10px 20px;
-  }
-
-  .snake,
-  .food {
-    width: 1.3rem;
-    height: 1.3rem;
   }
 }
