@@ -11,7 +11,7 @@ Welcome to SnakeXenzia! I'm currently working on it.
 ```
 2. Open the `index.html` file in your web browser.
 
-3. Alternatively, you can view a live demo of the SnakeXenzia here(Will be added soon).
+3. Alternatively, you can view a live demo of the SnakeXenzia [here](https://sh1v4nk.github.io/SnakeXenzia/).
 
 ## Technologies Used
 
