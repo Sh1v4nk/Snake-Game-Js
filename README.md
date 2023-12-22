@@ -2,6 +2,13 @@
 
 Welcome to SnakeXenzia! I'm currently working on it.
 
+## Table of Contents
+
+- [Note!](#note)
+- [Installation](#installation)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+
 ## Installation
 
 1. Clone the repository using the following command:
