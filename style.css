@@ -52,7 +52,6 @@ body {
   height: 90vw;
   max-width: 600px;
   max-height: 600px;
-  z-index: 1;
   background-color: #0b1533;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
@@ -159,6 +158,41 @@ body {
   width: 2rem;
   height: 2rem;
   background-color: var(--food-color);
+}
+
+.gameover-screen {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 90vw;
+  height: 90vw;
+  max-width: 600px;
+  max-height: 600px;
+  background-color: #0b1533;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  padding: 20px;
+}
+
+.gameover-screen img {
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.gameover-screen h1 {
+  font-size: var(--ml-font-size);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.gameover-screen p {
+  font-size: var(--med-font-size);
+  font-weight: 400;
+  margin-bottom: 1.5rem;
 }
 
 @media (max-width: 768px) {
