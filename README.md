@@ -9,6 +9,10 @@ Welcome to SnakeXenzia! I'm currently working on it.
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 
+### Note
+
+> This project is a work in progress and the JavaScript code is not uploaded yet. I'm actively working on completing the functionality. Feel free to check back later for updates. Thank you for your interest!
+
 ## Installation
 
 1. Clone the repository using the following command:
@@ -31,10 +35,6 @@ Welcome to SnakeXenzia! I'm currently working on it.
 Contributions are welcome! Please submit a pull request with any changes.
 
 ---
-
-### Note
-
-> This project is a work in progress and the JavaScript code is not uploaded yet. I'm actively working on completing the functionality. Feel free to check back later for updates. Thank you for your interest!
 
 If you have any suggestions or feedback, feel free to reach out to me.
 
