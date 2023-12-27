@@ -36,7 +36,7 @@ Contributions are welcome! Please submit a pull request with any changes.
 
 ---
 
-If you have any suggestions or feedback, feel free to reach out to me.
+Thank you for visiting my SnakeXenzia repository. If you have any suggestions or feedback, feel free to reach out to me.
 
 Connect with me:
 
