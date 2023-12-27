@@ -149,14 +149,14 @@ body {
 }
 
 .snake {
-  width: 2rem;
-  height: 2rem;
+  width: 100%;
+  height: 100%;
   background-color: var(--snake-color);
 }
 
 .food {
-  width: 2rem;
-  height: 2rem;
+  width: 100%;
+  height: 100%;
   background-color: var(--food-color);
 }
 
