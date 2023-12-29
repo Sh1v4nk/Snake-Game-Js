@@ -14,8 +14,8 @@ if (playGame) {
   startBtn.addEventListener("click", startGame);
 }
 
-setTimeout(function() {
-  startScreen.style.transform = 'scale(1)';
+setTimeout(function () {
+  startScreen.style.transform = "scale(1)";
 }, 130);
 
 function startGame() {
@@ -31,7 +31,17 @@ function draw() {
 
   const foodDiv = document.createElement("div");
   foodDiv.classList.add("food");
+
+  const numColumns = 20;
+  const numRows = 20;
+
+  // Calculate random row and column for the food within the fixed grid dimensions
+  const foodRow = (Math.floor(Math.random() * numRows) + 1) % numRows;
+  const foodCol = (Math.floor(Math.random() * numColumns) + 1) % numColumns;
   
+  foodDiv.style.gridRow = foodRow;
+  foodDiv.style.gridColumn = foodCol;
+
   gameArea.appendChild(snakeDiv);
   gameArea.appendChild(foodDiv);
 }
