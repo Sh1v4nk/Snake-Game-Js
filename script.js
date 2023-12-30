@@ -5,43 +5,94 @@ const currentScoreDisplay = document.querySelector("#current-score");
 const highScoreDisplay = document.querySelector("#high-score");
 const gameArea = document.querySelector(".game-container");
 
+// Game state variables
 let currentScore = 0;
 let highScore = 0;
-
 let playGame = true;
 
-if (playGame) {
-  startBtn.addEventListener("click", startGame);
-}
+// Snake variables
+let snakeRow = 8;
+let snakeCol = 10;
+let snakeDirectionX = 0;
+let snakeDirectionY = 0;
 
+// DOM elements for snake and food
+const foodDiv = document.createElement("div");
+foodDiv.classList.add("food");
+
+const snakeDiv = document.createElement("div");
+snakeDiv.classList.add("snake");
+
+// Event listener for arrow keys
+document.addEventListener("keydown", handleArrowKeys);
+
+// Initial animation for start screen
 setTimeout(function () {
   startScreen.style.transform = "scale(1)";
 }, 130);
 
+// Game Logic
+if (playGame) {
+  startBtn.addEventListener("click", startGame);
+}
+
+// Function to start the game
 function startGame() {
   startScreen.style.display = "none";
   scores.style.display = "flex";
   gameArea.style.display = "grid";
-  draw();
+  drawFood();
+  drawSnake();
 }
 
-function draw() {
-  const snakeDiv = document.createElement("div");
-  snakeDiv.classList.add("snake");
+// Function to handle arrow key events
+function handleArrowKeys(e) {
+  if (!playGame) return; // Don't handle arrow keys if the game is not active
 
-  const foodDiv = document.createElement("div");
-  foodDiv.classList.add("food");
+  switch (e.key) {
+    case "ArrowUp":
+      setSnakeDirection(0, -1);
+      break;
+    case "ArrowDown":
+      setSnakeDirection(0, 1);
+      break;
+    case "ArrowLeft":
+      setSnakeDirection(-1, 0);
+      break;
+    case "ArrowRight":
+      setSnakeDirection(1, 0);
+      break;
+  }
+}
 
-  const numColumns = 20;
-  const numRows = 20;
+// Function to set snake direction
+function setSnakeDirection(x, y) {
+  snakeDirectionX = x;
+  snakeDirectionY = y;
+}
 
-  // Calculate random row and column for the food within the fixed grid dimensions
-  const foodRow = (Math.floor(Math.random() * numRows) + 1) % numRows;
-  const foodCol = (Math.floor(Math.random() * numColumns) + 1) % numColumns;
-  
+// Function to draw food
+function drawFood() {
+  const foodRow = Math.floor(Math.random() * 20) + 1;
+  const foodCol = Math.floor(Math.random() * 20) + 1;
+
   foodDiv.style.gridRow = foodRow;
   foodDiv.style.gridColumn = foodCol;
 
-  gameArea.appendChild(snakeDiv);
   gameArea.appendChild(foodDiv);
+}
+
+// Function to draw snake
+function drawSnake() {
+  snakeRow += snakeDirectionY;
+  snakeCol += snakeDirectionX;
+
+  console.log(snakeRow, snakeCol);
+
+  snakeDiv.style.gridRow = snakeRow;
+  snakeDiv.style.gridColumn = snakeCol;
+
+  console.log(snakeRow, snakeCol);
+
+  gameArea.appendChild(snakeDiv);
 }
