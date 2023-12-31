@@ -71,14 +71,17 @@ function setSnakeDirection(x, y) {
   snakeDirectionY = y;
 }
 
-// Function to draw food
-function drawFood() {
+function changeFoodPosition() {
   const foodRow = Math.floor(Math.random() * 20) + 1;
   const foodCol = Math.floor(Math.random() * 20) + 1;
 
   foodDiv.style.gridRow = foodRow;
   foodDiv.style.gridColumn = foodCol;
+}
 
+// Function to draw food
+function drawFood() {
+  changeFoodPosition();
   gameArea.appendChild(foodDiv);
 }
 
@@ -87,12 +90,17 @@ function drawSnake() {
   snakeRow += snakeDirectionY;
   snakeCol += snakeDirectionX;
 
-  console.log(snakeRow, snakeCol);
+  // Check for collision with food
+  if (snakeRow === parseInt(foodDiv.style.gridRow) && snakeCol === parseInt(foodDiv.style.gridColumn)) {
+    currentScore ++;
+    currentScoreDisplay.textContent = currentScore;
+    changeFoodPosition();
+  }
 
   snakeDiv.style.gridRow = snakeRow;
   snakeDiv.style.gridColumn = snakeCol;
 
-  console.log(snakeRow, snakeCol);
-
   gameArea.appendChild(snakeDiv);
 }
+
+setInterval(drawSnake, 125);
