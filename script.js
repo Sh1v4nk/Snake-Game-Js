@@ -72,8 +72,8 @@ function setSnakeDirection(x, y) {
 }
 
 function changeFoodPosition() {
-  const foodRow = Math.floor(Math.random() * 20) + 1;
-  const foodCol = Math.floor(Math.random() * 20) + 1;
+  const foodRow = Math.floor(Math.random() * 30) + 1;
+  const foodCol = Math.floor(Math.random() * 30) + 1;
 
   foodDiv.style.gridRow = foodRow;
   foodDiv.style.gridColumn = foodCol;
