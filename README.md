@@ -20,6 +20,7 @@ Welcome to SnakeXenzia! I'm currently working on it.
 ```bash
  git clone https://github.com/Sh1v4nk/SnakeXenzia.git
 ```
+
 2. Open the `index.html` file in your web browser.
 
 3. Alternatively, you can view a live demo of the SnakeXenzia [here](https://sh1v4nk.github.io/SnakeXenzia/).
@@ -29,6 +30,12 @@ Welcome to SnakeXenzia! I'm currently working on it.
 - HTML
 - CSS
 - JavaScript
+
+## Screenshots
+
+<div align="center">
+  <img src="https://i.ibb.co/9GhfPVN/snakexenzia.png" alt="SnakeXenzia">
+</div>
 
 ## Contributing
 
