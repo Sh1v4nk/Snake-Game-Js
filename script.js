@@ -49,19 +49,28 @@ function startGame() {
 function handleArrowKeys(e) {
   if (!playGame) return; // Don't handle arrow keys if the game is not active
 
+  // Determine the new direction
+  let newDirectionX = 0;
+  let newDirectionY = 0;
+
   switch (e.key) {
     case "ArrowUp":
-      setSnakeDirection(0, -1);
+      newDirectionY = -1;
       break;
     case "ArrowDown":
-      setSnakeDirection(0, 1);
+      newDirectionY = 1;
       break;
     case "ArrowLeft":
-      setSnakeDirection(-1, 0);
+      newDirectionX = -1;
       break;
     case "ArrowRight":
-      setSnakeDirection(1, 0);
+      newDirectionX = 1;
       break;
+  }
+
+  // Check if the new direction is opposite to the current direction
+  if (newDirectionX !== -snakeDirectionX || newDirectionY !== -snakeDirectionY) {
+    setSnakeDirection(newDirectionX, newDirectionY);
   }
 }
 
@@ -91,8 +100,11 @@ function drawSnake() {
   snakeCol += snakeDirectionX;
 
   // Check for collision with food
-  if (snakeRow === parseInt(foodDiv.style.gridRow) && snakeCol === parseInt(foodDiv.style.gridColumn)) {
-    currentScore ++;
+  if (
+    snakeRow === parseInt(foodDiv.style.gridRow) &&
+    snakeCol === parseInt(foodDiv.style.gridColumn)
+  ) {
+    currentScore++;
     currentScoreDisplay.textContent = currentScore;
     changeFoodPosition();
   }
