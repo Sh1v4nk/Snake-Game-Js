@@ -17,23 +17,24 @@ let snakeDirectionX = 0;
 let snakeDirectionY = 0;
 
 // DOM elements for snake and food
-const foodDiv = document.createElement("div");
-foodDiv.classList.add("food");
+const foodDiv = createGameElement("food");
+const snakeDiv = createGameElement("snake");
 
-const snakeDiv = document.createElement("div");
-snakeDiv.classList.add("snake");
 
-// Event listener for arrow keys
-document.addEventListener("keydown", handleArrowKeys);
-
-// Initial animation for start screen
-setTimeout(function () {
+setTimeout(() => {
   startScreen.style.transform = "scale(1)";
 }, 130);
 
 // Game Logic
 if (playGame) {
   startBtn.addEventListener("click", startGame);
+}
+
+// Function to create game elements
+function createGameElement(className) {
+  const element = document.createElement("div");
+  element.classList.add(className);
+  return element;
 }
 
 // Function to start the game
@@ -45,9 +46,10 @@ function startGame() {
   drawSnake();
 }
 
-// Function to handle arrow key events
+document.addEventListener("keydown", handleArrowKeys);
+
 function handleArrowKeys(e) {
-  if (!playGame) return; // Don't handle arrow keys if the game is not active
+  if (!playGame) return;
 
   // Determine the new direction
   let newDirectionX = 0;
@@ -80,6 +82,7 @@ function setSnakeDirection(x, y) {
   snakeDirectionY = y;
 }
 
+// Function to change food position
 function changeFoodPosition() {
   const foodRow = Math.floor(Math.random() * 30) + 1;
   const foodCol = Math.floor(Math.random() * 30) + 1;
@@ -113,6 +116,15 @@ function drawSnake() {
   snakeDiv.style.gridColumn = snakeCol;
 
   gameArea.appendChild(snakeDiv);
+
+  checkCollisions()
 }
 
+function checkCollisions() {
+  if (snakeRow < 1 || snakeRow > 30 || snakeCol < 1 || snakeCol > 30) {
+    alert("Game Over!");
+  }
+}
+
+// Set interval for drawing snake
 setInterval(drawSnake, 125);
