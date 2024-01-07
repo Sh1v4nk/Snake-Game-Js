@@ -145,7 +145,22 @@ function gameOver() {
 restartBtn.addEventListener("click", resetGame);
 
 function resetGame() {
-  console.log("reset");
+  currentScore = 0;
+  currentScoreDisplay.textContent = currentScore;
+
+  playGame = true;
+  snakeRow = 8;
+  snakeCol = 10;
+  snakeDirectionX = 0;
+  snakeDirectionY = 0;
+
+  gameArea.innerHTML = "";
+
+  
+  gameOverScreen.style.display = "none";
+  scores.style.display = "flex";
+
+  startGame();
 }
 
 // Set interval for drawing snake
