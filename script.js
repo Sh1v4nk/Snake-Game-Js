@@ -140,6 +140,8 @@ function gameOver() {
     highScore = currentScore;
     highScoreDisplay.textContent = highScore;
   }
+
+  localStorage.setItem("lastHighScore", highScore);
 }
 
 restartBtn.addEventListener("click", resetGame);
@@ -156,12 +158,14 @@ function resetGame() {
 
   gameArea.innerHTML = "";
 
-  
   gameOverScreen.style.display = "none";
   scores.style.display = "flex";
 
   startGame();
 }
+
+highScore = localStorage.getItem("lastHighScore") || 0;
+highScoreDisplay.textContent = highScore;
 
 // Set interval for drawing snake
 let drawSnakeInterval = setInterval(drawSnake, 125);
