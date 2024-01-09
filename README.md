@@ -1,24 +1,50 @@
 # SnakeXenzia
 
-Welcome to SnakeXenzia! I'm currently working on it.
+Welcome to SnakeXenzia! Below, you'll find information about the SnakeXenzia game and how to contribute to this project.
 
 ## Table of Contents
 
 - [Note!](#note)
+- [About SnakeXenzia](#about-snakexenzia)
+- [Features](#features)
+- [How to Play](#how-to-play)
 - [Installation](#installation)
 - [Technologies Used](#technologies-used)
+- [Screenshots](#screenshots)
 - [Contributing](#contributing)
+- [Connect with Me](#connect-with-me)
 
 ### Note
 
-> This project is a work in progress and the JavaScript code is not uploaded yet. I'm actively working on completing the functionality. Feel free to check back later for updates. Thank you for your interest!
+> Some functionalities are not implemented yet, but stay tuned! I'm actively working on completing them. Feel free to check back later for updates. Thank you for your interest!
+
+## About SnakeXenzia
+
+SnakeXenzia is a classic Snake game built using HTML, CSS, and JavaScript. The project aims to recreate the nostalgic experience of the iconic Snake Xenzia game, allowing users to relive the simple yet addictive gameplay.
+
+## Features
+
+**Classic Gameplay:** Experience the timeless joy of controlling a snake and eating food to grow longer.
+
+**Responsive Design:** The game adapts to different screen sizes, ensuring a seamless experience on various devices.
+
+**Score Tracking:** Keep track of your high score as you strive to beat your previous records.
+
+**Simple Controls:** Use arrow keys or swipe gestures to control the snake's direction.
+
+## How to Play
+
+1. Open [SnakeXenzia](https://sh1v4nk.github.io/SnakeXenzia/) in a web browser.
+2. Use arrow keys or swipe gestures (on touch devices) to control the snake. _(Will be implemented soon)_
+3. Collect food to grow longer and increase your score.
+4. Avoid collisions with the snake's own body and the game borders. _(Will be implemented soon)_
 
 ## Installation
 
 1. Clone the repository using the following command:
 
 ```bash
- git clone https://github.com/Sh1v4nk/SnakeXenzia.git
+git clone https://github.com/Sh1v4nk/SnakeXenzia.git
 ```
 
 2. Open the `index.html` file in your web browser.
@@ -39,7 +65,11 @@ Welcome to SnakeXenzia! I'm currently working on it.
 
 ## Contributing
 
-Contributions are welcome! Please submit a pull request with any changes.
+Contributions are welcome! If you'd like to contribute to SnakeXenzia, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and submit a pull request.
 
 ---
 
