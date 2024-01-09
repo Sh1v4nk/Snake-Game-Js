@@ -5,14 +5,14 @@ Welcome to SnakeXenzia! Below, you'll find information about the SnakeXenzia gam
 ## Table of Contents
 
 - [Note!](#note)
-- [About SnakeXenzia](#about-snakexenzia)
+- [About SnakeXenzia](#about_snakexenzia)
 - [Features](#features)
-- [How to Play](#how-to-play)
+- [How to Play](#how_to_play)
 - [Installation](#installation)
-- [Technologies Used](#technologies-used)
+- [Technologies Used](#technologies_used)
 - [Screenshots](#screenshots)
 - [Contributing](#contributing)
-- [Connect with Me](#connect-with-me)
+- [Connect with Me](#connect_with_me)
 
 ### Note
 
