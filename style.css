@@ -17,11 +17,6 @@ html {
 :root {
   --text-color: #f2f2f2;
   --bg-color: #181a1b;
-  --xl-font-size: 3.2rem;
-  --ml-font-size: 2.4rem;
-  --med-font-size: 1.6rem;
-  --s-font-size: 1.2rem;
-  --xs-font-size: 1rem;
   --snake-color: #00abf0;
   --food-color: #f00;
 }
@@ -86,13 +81,13 @@ body {
 }
 
 .start-screen h1 {
-  font-size: var(--ml-font-size);
+  font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .start-screen p {
-  font-size: var(--med-font-size);
+  font-size: 1.6rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
 }
@@ -100,7 +95,7 @@ body {
 .start-btn {
   display: inline-block;
   padding: 15px 30px;
-  font-size: var(--s-font-size);
+  font-size: 1.2rem;
   font-weight: 500;
   text-align: center;
   cursor: pointer;
@@ -122,7 +117,7 @@ body {
 }
 
 .score-container h1 {
-  font-size: var(--med-font-size);
+  font-size: 1.6rem;
   font-weight: 400;
 }
 
@@ -183,13 +178,13 @@ body {
 }
 
 .gameover-screen h1 {
-  font-size: var(--ml-font-size);
+  font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .gameover-screen p {
-  font-size: var(--med-font-size);
+  font-size: 1.6rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
 }
@@ -197,7 +192,7 @@ body {
 .restart-btn {
   display: inline-block;
   padding: 15px 30px;
-  font-size: var(--s-font-size);
+  font-size: 1.2rem;
   font-weight: 500;
   text-align: center;
   cursor: pointer;
@@ -216,7 +211,7 @@ body {
   }
 
   .scores h1 {
-    font-size: var(--med-font-size);
+    font-size: 1.6rem;
   }
 
   .start-screen h1 {
