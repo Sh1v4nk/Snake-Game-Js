@@ -134,8 +134,7 @@ body {
   padding: 0.5px;
   grid-template-columns: repeat(30, minmax(auto, 1fr));
   grid-template-rows: repeat(30, minmax(auto, 1fr));
-  border: 3rem solid var(--border-color);
-  border-radius: 0.4rem;
+  border: 3rem solid #f2f2f2;
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
@@ -210,7 +209,7 @@ body {
     max-height: 300px;
   }
 
-  .scores h1 {
+  .score-container h1 {
     font-size: 1.6rem;
   }
 
