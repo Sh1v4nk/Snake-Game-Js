@@ -1,11 +1,11 @@
 const startScreen = document.querySelector(".start-screen");
-const startBtn = document.querySelector(".start-btn");
+const startBtn = document.querySelector("#startButton");
 const scores = document.querySelector(".score-container");
 const currentScoreDisplay = document.querySelector("#current-score");
 const highScoreDisplay = document.querySelector("#high-score");
 const gameArea = document.querySelector(".game-container");
 const gameOverScreen = document.querySelector(".gameover-screen");
-const restartBtn = document.querySelector(".restart-btn");
+const restartBtn = document.querySelector("#restartButton");
 
 // Game state variables
 let currentScore = 0;

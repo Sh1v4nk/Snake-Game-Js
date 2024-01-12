@@ -38,7 +38,7 @@ body {
   color: var(--text-color);
 }
 
-.start-screen {
+.overlay-screen {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -55,10 +55,16 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
+.gameover-screen {
+  display: none;
+  transform: scale(1);
+}
+
 .start-screen img {
   width: 80%;
   max-width: 300px;
   height: auto;
+  user-select: none;
   border-radius: 0.4rem;
   margin-bottom: 0.5rem;
   animation: flicker 2s infinite;
@@ -80,19 +86,19 @@ body {
   }
 }
 
-.start-screen h1 {
+.overlay-screen h1 {
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.start-screen p {
+.overlay-screen p {
   font-size: 1.6rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
 }
 
-.start-btn {
+.buttons {
   display: inline-block;
   padding: 15px 30px;
   font-size: 1.2rem;
@@ -106,7 +112,7 @@ body {
   transition: background-color 0.3s ease-in-out;
 }
 
-.start-btn:hover {
+.buttons:hover {
   background-color: #2980b9;
 }
 
@@ -134,95 +140,54 @@ body {
   padding: 0.5px;
   grid-template-columns: repeat(30, minmax(auto, 1fr));
   grid-template-rows: repeat(30, minmax(auto, 1fr));
-  border: 3rem solid #f2f2f2;
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid var(--text-color);
 }
 
-.snake {
+.snake,
+.food {
   width: 100%;
   height: 100%;
   background-color: var(--snake-color);
 }
 
 .food {
-  width: 100%;
-  height: 100%;
   background-color: var(--food-color);
-}
-
-.gameover-screen {
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  width: 90vw;
-  height: 90vw;
-  max-width: 600px;
-  max-height: 600px;
-  background-color: #0b1533;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-  padding: 20px;
 }
 
 .gameover-screen img {
   width: 80%;
   max-width: 300px;
   height: auto;
+  user-select: none;
   border-radius: 0.4rem;
   margin-bottom: 0.5rem;
 }
 
-.gameover-screen h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.gameover-screen p {
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin-bottom: 1.5rem;
-}
-
-.restart-btn {
-  display: inline-block;
-  padding: 15px 30px;
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-  background-color: #3498db;
-  color: var(--text-color);
-  border-radius: 5px;
-  transition: background-color 0.3s ease-in-out;
-}
-
 @media (max-width: 768px) {
-  .start-screen img {
+  .overlay-screen {
     width: 60%;
     height: 60%;
     max-height: 300px;
   }
 
-  .score-container h1 {
-    font-size: 1.6rem;
-  }
-
-  .start-screen h1 {
+  .overlay-screen {
     font-size: 1.5rem;
   }
 
-  .start-screen p {
+  .overlay-screen {
     font-size: 1rem;
   }
 
-  .start-button {
+  .buttons {
     font-size: 1rem;
     padding: 10px 20px;
+  }
+
+  .score-container h1 {
+    font-size: 1.6rem;
   }
 }
