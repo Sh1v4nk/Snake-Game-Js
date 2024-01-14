@@ -16,7 +16,7 @@ html {
 
 :root {
   --text-color: #f2f2f2;
-  --bg-color: #181a1b;
+  --accent-color: #0b1533;
   --snake-color: #00abf0;
   --food-color: #f00;
 }
@@ -47,7 +47,7 @@ body {
   height: 90vw;
   max-width: 600px;
   max-height: 600px;
-  background-color: #0b1533;
+  background-color: var(--accent-color);
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   padding: 20px;
@@ -119,7 +119,9 @@ body {
 .score-container {
   display: none;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  padding: 1.2rem 2rem;
+  background-color: #35356a;
+  border: 1px solid var(--text-color);
 }
 
 .score-container h1 {
@@ -140,7 +142,7 @@ body {
   padding: 0.5px;
   grid-template-columns: repeat(30, minmax(auto, 1fr));
   grid-template-rows: repeat(30, minmax(auto, 1fr));
-  background: rgba(255, 255, 255, 0);
+  background-color: var(--accent-color);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -168,7 +170,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .overlay-screen {
+  .overlay-screen img{
     width: 60%;
     height: 60%;
     max-height: 300px;

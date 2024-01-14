@@ -164,7 +164,7 @@ function resetGame() {
   startGame();
 }
 
-highScore = localStorage.getItem("lastHighScore") || 0;
+highScore = localStorage.getItem("lastHighScore") || 0 + "0";
 highScoreDisplay.textContent = highScore;
 
 // Set interval for drawing snake
