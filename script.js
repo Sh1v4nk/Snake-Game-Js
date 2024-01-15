@@ -7,44 +7,27 @@ const gameArea = document.querySelector(".game-container");
 const gameOverScreen = document.querySelector(".gameover-screen");
 const restartBtn = document.querySelector("#restartButton");
 
-// Game state variables
 let currentScore = 0;
-let highScore = 0;
+let highScore = localStorage.getItem("lastHighScore") || 0 + "0";
 let playGame = true;
 
-// Snake variables
-let snakeRow = 8;
-let snakeCol = 10;
-let snakeDirectionX = 0;
-let snakeDirectionY = 0;
+highScoreDisplay.textContent = highScore;
 
-// DOM elements for snake and food
+let snake = {
+  row: 8,
+  col: 10,
+  directionX: 0,
+  directionY: 0,
+  body: [],
+};
+
 const foodDiv = createGameElement("food");
 const snakeDiv = createGameElement("snake");
 
-setTimeout(() => {
-  startScreen.style.transform = "scale(1)";
-}, 130);
-
-// Game Logic
-if (playGame) {
-  startBtn.addEventListener("click", startGame);
-}
-
-// Function to create game elements
 function createGameElement(className) {
   const element = document.createElement("div");
   element.classList.add(className);
   return element;
-}
-
-// Function to start the game
-function startGame() {
-  startScreen.style.display = "none";
-  scores.style.display = "flex";
-  gameArea.style.display = "grid";
-  drawFood();
-  drawSnake();
 }
 
 document.addEventListener("keydown", handleArrowKeys);
@@ -52,41 +35,51 @@ document.addEventListener("keydown", handleArrowKeys);
 function handleArrowKeys(e) {
   if (!playGame) return;
 
-  // Determine the new direction
-  let newDirectionX = 0;
-  let newDirectionY = 0;
+  const directions = {
+    ArrowUp: { x: 0, y: -1 },
+    ArrowDown: { x: 0, y: 1 },
+    ArrowLeft: { x: -1, y: 0 },
+    ArrowRight: { x: 1, y: 0 },
+  };
 
-  switch (e.key) {
-    case "ArrowUp":
-      newDirectionY = -1;
-      break;
-    case "ArrowDown":
-      newDirectionY = 1;
-      break;
-    case "ArrowLeft":
-      newDirectionX = -1;
-      break;
-    case "ArrowRight":
-      newDirectionX = 1;
-      break;
-  }
+  const newDirection = directions[e.key];
 
-  // Check if the new direction is opposite to the current direction
   if (
-    newDirectionX !== -snakeDirectionX ||
-    newDirectionY !== -snakeDirectionY
+    newDirection &&
+    (newDirection.x !== -snake.directionX ||
+      newDirection.y !== -snake.directionY)
   ) {
-    setSnakeDirection(newDirectionX, newDirectionY);
+    setSnakeDirection(newDirection.x, newDirection.y);
   }
 }
 
-// Function to set snake direction
 function setSnakeDirection(x, y) {
-  snakeDirectionX = x;
-  snakeDirectionY = y;
+  snake.directionX = x;
+  snake.directionY = y;
 }
 
-// Function to change food position
+function drawSnake() {
+  snake.row += snake.directionY;
+  snake.col += snake.directionX;
+
+  if (checkCollisionWithFood()) {
+    handleFoodCollision();
+  }
+
+  snakeDiv.style.gridRow = snake.row;
+  snakeDiv.style.gridColumn = snake.col;
+
+  gameArea.appendChild(snakeDiv);
+
+  checkCollisions();
+}
+
+function handleFoodCollision() {
+  currentScore++;
+  currentScoreDisplay.textContent = currentScore;
+  changeFoodPosition();
+}
+
 function changeFoodPosition() {
   const foodRow = Math.floor(Math.random() * 30) + 1;
   const foodCol = Math.floor(Math.random() * 30) + 1;
@@ -95,39 +88,32 @@ function changeFoodPosition() {
   foodDiv.style.gridColumn = foodCol;
 }
 
-// Function to draw food
 function drawFood() {
   changeFoodPosition();
   gameArea.appendChild(foodDiv);
 }
 
-// Function to draw snake
-function drawSnake() {
-  snakeRow += snakeDirectionY;
-  snakeCol += snakeDirectionX;
-
-  // Check for collision with food
-  if (
-    snakeRow === parseInt(foodDiv.style.gridRow) &&
-    snakeCol === parseInt(foodDiv.style.gridColumn)
-  ) {
-    currentScore++;
-    currentScoreDisplay.textContent = currentScore;
-    changeFoodPosition();
-  }
-
-  snakeDiv.style.gridRow = snakeRow;
-  snakeDiv.style.gridColumn = snakeCol;
-
-  gameArea.appendChild(snakeDiv);
-
-  checkCollisions();
+function checkCollisionWithFood() {
+  return (
+    snake.row === parseInt(foodDiv.style.gridRow) &&
+    snake.col === parseInt(foodDiv.style.gridColumn)
+  );
 }
 
 function checkCollisions() {
-  if (snakeRow < 1 || snakeRow > 30 || snakeCol < 1 || snakeCol > 30) {
+  if (snake.row < 1 || snake.row > 30 || snake.col < 1 || snake.col > 30) {
     gameOver();
   }
+}
+
+startBtn.addEventListener("click", startGame);
+
+function startGame() {
+  startScreen.style.display = "none";
+  scores.style.display = "flex";
+  gameArea.style.display = "grid";
+  drawFood();
+  drawSnake();
 }
 
 function gameOver() {
@@ -151,10 +137,7 @@ function resetGame() {
   currentScoreDisplay.textContent = currentScore;
 
   playGame = true;
-  snakeRow = 8;
-  snakeCol = 10;
-  snakeDirectionX = 0;
-  snakeDirectionY = 0;
+  snake = { row: 8, col: 10, directionX: 0, directionY: 0, body: [] };
 
   gameArea.innerHTML = "";
 
@@ -164,8 +147,8 @@ function resetGame() {
   startGame();
 }
 
-highScore = localStorage.getItem("lastHighScore") || 0 + "0";
-highScoreDisplay.textContent = highScore;
-
-// Set interval for drawing snake
 let drawSnakeInterval = setInterval(drawSnake, 125);
+
+setTimeout(() => {
+  startScreen.style.transform = "scale(1)";
+}, 130);
