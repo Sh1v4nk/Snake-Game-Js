@@ -59,25 +59,58 @@ function setSnakeDirection(x, y) {
 }
 
 function drawSnake() {
-  snake.row += snake.directionY;
-  snake.col += snake.directionX;
+  const newHead = {
+    row: snake.row + snake.directionY,
+    col: snake.col + snake.directionX,
+  };
+
+  updateBodyPosition();
+
+  snake.row = newHead.row;
+  snake.col = newHead.col;
 
   if (checkCollisionWithFood()) {
     handleFoodCollision();
   }
 
-  snakeDiv.style.gridRow = snake.row;
-  snakeDiv.style.gridColumn = snake.col;
-
+  updateSnakeAppearance();
   gameArea.appendChild(snakeDiv);
 
   checkCollisions();
 }
 
+function updateBodyPosition() {
+  for (let i = snake.body.length - 1; i >= 0; i--) {
+    const currentBodyPart = snake.body[i];
+
+    if (i === 0) {
+      currentBodyPart.style.gridRow = snake.row;
+      currentBodyPart.style.gridColumn = snake.col;
+    } else {
+      const previousBodyPart = snake.body[i - 1];
+      currentBodyPart.style.gridRow = previousBodyPart.style.gridRow;
+      currentBodyPart.style.gridColumn = previousBodyPart.style.gridColumn;
+    }
+  }
+}
+
 function handleFoodCollision() {
   currentScore++;
   currentScoreDisplay.textContent = currentScore;
+
+  const newBodyPart = createGameElement("snake");
+  newBodyPart.style.gridRow = snake.row;
+  newBodyPart.style.gridColumn = snake.col;
+
+  snake.body.unshift(newBodyPart);
+  gameArea.appendChild(newBodyPart);
+
   changeFoodPosition();
+}
+
+function updateSnakeAppearance() {
+  snakeDiv.style.gridRow = snake.row;
+  snakeDiv.style.gridColumn = snake.col;
 }
 
 function changeFoodPosition() {
@@ -125,9 +158,8 @@ function gameOver() {
   if (currentScore > highScore) {
     highScore = currentScore;
     highScoreDisplay.textContent = highScore;
+    localStorage.setItem("lastHighScore", highScore);
   }
-
-  localStorage.setItem("lastHighScore", highScore);
 }
 
 restartBtn.addEventListener("click", resetGame);
