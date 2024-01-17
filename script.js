@@ -137,6 +137,15 @@ function checkCollisions() {
   if (snake.row < 1 || snake.row > 30 || snake.col < 1 || snake.col > 30) {
     gameOver();
   }
+
+  for (let i = 1; i < snake.body.length; i++) {
+    if (
+      snake.row === parseInt(snake.body[i].style.gridRow) &&
+      snake.col === parseInt(snake.body[i].style.gridColumn)
+    ) {
+      gameOver();
+    }
+  }
 }
 
 startBtn.addEventListener("click", startGame);
