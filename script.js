@@ -26,6 +26,14 @@ let snake = {
   body: [],
 };
 
+function isMobileDevice() {
+  return window.matchMedia("(max-width: 768px)").matches;
+}
+
+function updateMobileControlsVisibility() {
+  mobileKeysControl.style.display = isMobileDevice() ? "grid" : "none";
+}
+
 const foodDiv = createGameElement("food");
 const snakeDiv = createGameElement("snake");
 
@@ -164,12 +172,6 @@ function checkCollisions() {
   }
 }
 
-const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
-if (isMobile) {
-  mobileKeysControl.style.display = "none";
-}
-
 startBtn.addEventListener("click", startGame);
 
 function startGame() {
@@ -177,6 +179,7 @@ function startGame() {
   scores.style.display = "flex";
   gameArea.style.display = "grid";
   mobileKeysControl.style.display = "flex";
+  updateMobileControlsVisibility();
   drawFood();
   drawSnake();
 }
