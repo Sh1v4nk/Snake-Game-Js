@@ -164,6 +164,12 @@ function checkCollisions() {
   }
 }
 
+const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+if (isMobile) {
+  mobileKeysControl.style.display = "none";
+}
+
 startBtn.addEventListener("click", startGame);
 
 function startGame() {
