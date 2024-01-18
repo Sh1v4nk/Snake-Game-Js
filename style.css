@@ -170,6 +170,7 @@ body {
 }
 
 .mobile-controls {
+  display: none;
   width: 150px;
   margin: 5rem auto auto;
   place-content: center;
