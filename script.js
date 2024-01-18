@@ -6,6 +6,11 @@ const highScoreDisplay = document.querySelector("#high-score");
 const gameArea = document.querySelector(".game-container");
 const gameOverScreen = document.querySelector(".gameover-screen");
 const restartBtn = document.querySelector("#restartButton");
+const mobileKeysControl = document.querySelector(".mobile-controls");
+const upButton = document.querySelector(".up-btn");
+const downButton = document.querySelector(".down-btn");
+const leftButton = document.querySelector(".left-btn");
+const rightButton = document.querySelector(".right-btn");
 
 let currentScore = 0;
 let highScore = localStorage.getItem("lastHighScore") || 0 + "0";
@@ -28,6 +33,17 @@ function createGameElement(className) {
   const element = document.createElement("div");
   element.classList.add(className);
   return element;
+}
+
+upButton.addEventListener("click", () => simulateKeyPress("ArrowUp"));
+downButton.addEventListener("click", () => simulateKeyPress("ArrowDown"));
+leftButton.addEventListener("click", () => simulateKeyPress("ArrowLeft"));
+rightButton.addEventListener("click", () => simulateKeyPress("ArrowRight"));
+
+function simulateKeyPress(key) {
+  const event = new Event("keydown");
+  event.key = key;
+  document.dispatchEvent(event);
 }
 
 document.addEventListener("keydown", handleArrowKeys);
@@ -154,6 +170,7 @@ function startGame() {
   startScreen.style.display = "none";
   scores.style.display = "flex";
   gameArea.style.display = "grid";
+  mobileKeysControl.style.display = "flex";
   drawFood();
   drawSnake();
 }
@@ -163,6 +180,7 @@ function gameOver() {
   gameOverScreen.style.display = "flex";
   scores.style.display = "none";
   gameArea.style.display = "none";
+  mobileKeysControl.style.display = "none";
 
   if (currentScore > highScore) {
     highScore = currentScore;

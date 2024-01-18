@@ -169,8 +169,25 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.mobile-controls {
+  display: none;
+  border: 1px solid var(--text-color);
+}
+
+.mobile-controls button {
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: #3498db;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
-  .overlay-screen img{
+  .overlay-screen img {
     width: 60%;
     height: 60%;
     max-height: 300px;
@@ -191,5 +208,11 @@ body {
 
   .score-container h1 {
     font-size: 1.6rem;
+  }
+
+  .mobile-controls {
+    display: none;
+    justify-content: center;
+    align-items: center;
   }
 }
