@@ -170,19 +170,39 @@ body {
 }
 
 .mobile-controls {
-  display: none;
-  border: 1px solid var(--text-color);
+  width: 150px;
+  margin: 5rem auto auto;
+  place-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0;
+  grid-template-areas:
+    ". up-btn ."
+    "left-btn . right-btn"
+    ". down-btn .";
+}
+.up-btn {
+  grid-area: up-btn;
+}
+.left-btn {
+  grid-area: left-btn;
+}
+.right-btn {
+  grid-area: right-btn;
+}
+.down-btn {
+  grid-area: down-btn;
 }
 
 .mobile-controls button {
-  font-size: 2rem;
-  font-weight: 900;
+  background: #3498db;
+  font-size: 3rem;
   text-align: center;
-  padding: 1rem;
-  width: 100%;
-  border: 1px solid black;
-  border-radius: 3px;
-  background-color: #3498db;
+  padding: 0.5rem;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 1rem;
+  border: 1px solid #000;
   cursor: pointer;
 }
 
@@ -212,7 +232,5 @@ body {
 
   .mobile-controls {
     display: none;
-    justify-content: center;
-    align-items: center;
   }
 }
