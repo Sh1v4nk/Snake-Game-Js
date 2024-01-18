@@ -4,7 +4,6 @@ Welcome to SnakeXenzia! Below, you'll find information about the SnakeXenzia gam
 
 ## Table of Contents
 
-- [Note!](#note)
 - [About SnakeXenzia](#about-snakexenzia)
 - [Features](#features)
 - [How to Play](#how-to-play)
@@ -13,10 +12,6 @@ Welcome to SnakeXenzia! Below, you'll find information about the SnakeXenzia gam
 - [Screenshots](#screenshots)
 - [Contributing](#contributing)
 - [Connect with Me](#connect-with-me)
-
-### Note
-
-> Some functionalities are not implemented yet, but stay tuned! I'm actively working on completing them. Feel free to check back later for updates. Thank you for your interest!
 
 ## About SnakeXenzia
 
@@ -30,12 +25,12 @@ SnakeXenzia is a classic Snake game built using HTML, CSS, and JavaScript. The p
 
 **Score Tracking:** Keep track of your high score as you strive to beat your previous records.
 
-**Simple Controls:** Use arrow keys or swipe gestures to control the snake's direction.
+**Simple Controls:** Use arrow keys to control the snake's direction.
 
 ## How to Play
 
 1. Open [SnakeXenzia](https://sh1v4nk.github.io/SnakeXenzia/) in a web browser.
-2. Use arrow keys or swipe gestures (on touch devices) to control the snake. **_(Will be implemented soon)_**
+2. Use arrow keys(on touch devices) to control the snake.
 3. Collect food to grow longer and increase your score.
 4. Avoid collisions with the snake's own body and the game borders.
 
