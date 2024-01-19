@@ -11,10 +11,12 @@ const upButton = document.querySelector(".up-btn");
 const downButton = document.querySelector(".down-btn");
 const leftButton = document.querySelector(".left-btn");
 const rightButton = document.querySelector(".right-btn");
+const playPauseButton = document.querySelector(".play-pause");
 
 let currentScore = 0;
 let highScore = localStorage.getItem("lastHighScore") || 0 + "0";
 let playGame = true;
+let isPaused = false;
 
 highScoreDisplay.textContent = highScore;
 
@@ -57,7 +59,10 @@ function simulateKeyPress(key) {
 document.addEventListener("keydown", handleArrowKeys);
 
 function handleArrowKeys(e) {
-  if (!playGame) return;
+  if (isPaused) {
+    alert("Game is paused! Resume to play.");
+    return;
+  }
 
   const directions = {
     ArrowUp: { x: 0, y: -1 },
@@ -80,6 +85,24 @@ function handleArrowKeys(e) {
 function setSnakeDirection(x, y) {
   snake.directionX = x;
   snake.directionY = y;
+}
+
+playPauseButton.addEventListener("click", togglePlayPause);
+
+function togglePlayPause() {
+  if (isPaused) {
+    // Resume the game
+    drawSnakeInterval = setInterval(drawSnake, 125);
+    playPauseButton.querySelector(".pause-icon").style.display = "inline";
+    playPauseButton.querySelector(".play-icon").style.display = "none";
+  } else {
+    // Pause the game
+    clearInterval(drawSnakeInterval);
+    playPauseButton.querySelector(".pause-icon").style.display = "none";
+    playPauseButton.querySelector(".play-icon").style.display = "inline";
+  }
+
+  isPaused = !isPaused;
 }
 
 function drawSnake() {
