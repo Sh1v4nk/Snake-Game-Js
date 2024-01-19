@@ -119,9 +119,32 @@ body {
 .score-container {
   display: none;
   justify-content: space-between;
+  align-items: center;
   padding: 1.2rem 2rem;
   background-color: #35356a;
   border: 1px solid var(--text-color);
+}
+
+.score-container button {
+  display: inline-flex;
+  background: #3498db;
+  border-radius: 3px;
+  padding: 0.2rem;
+  height: 100%;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 01, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.custom-icon {
+  color: var(--accent-color);
+}
+
+.play-icon {
+  display: none;
 }
 
 .score-container h1 {
