@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,16 +30,28 @@
                 <h1>
                     High Score: <span id="high-score">00</span>
                 </h1>
+                <button class="play-pause">
+                    <span class="material-symbols-outlined custom-icon pause-icon">pause</span>
+                    <span class="material-symbols-outlined custom-icon play-icon">play_arrow</span>
+                </button>
             </div>
 
             <div class="game-container">
             </div>
 
             <div class="mobile-controls">
-                <button class="left-btn">←</button>
-                <button class="up-btn">↑</button>
-                <button class="down-btn">↓</button>
-                <button class="right-btn">→</button>
+                <button class="left-btn"><span class="material-symbols-outlined">
+                        arrow_back
+                    </span></button>
+                <button class="up-btn"><span class="material-symbols-outlined">
+                        arrow_upward
+                    </span></button>
+                <button class="down-btn"><span class="material-symbols-outlined">
+                        arrow_downward
+                    </span></button>
+                <button class="right-btn"><span class="material-symbols-outlined">
+                        arrow_forward
+                    </span></button>
             </div>
 
             <div class="gameover-screen overlay-screen">
@@ -46,10 +59,10 @@
                 <h1>Game Over</h1>
                 <p>Press the Restart button to play again!</p>
                 <button id="restartButton" class="restart-btn buttons">Restart Game</button>
+            </div>
+
         </div>
 
-    </div>
-
-    <script src="script.js" defer></script>
+        <script src="script.js" defer></script>
 </body>
 </html>
