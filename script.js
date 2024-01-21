@@ -197,7 +197,20 @@ function checkCollisions() {
 
 startBtn.addEventListener("click", startGame);
 
+let isGameRunning = false;
+
+document.addEventListener("keydown", function (e) {
+  if (e.code === "Space") {
+    if (!isGameRunning) {
+      resetGame();
+    } else if (!playGame) {
+      startGame();
+    }
+  }
+});
+
 function startGame() {
+  isGameRunning = true;
   startScreen.style.display = "none";
   scores.style.display = "flex";
   gameArea.style.display = "grid";
@@ -209,6 +222,7 @@ function startGame() {
 
 function gameOver() {
   playGame = false;
+  isGameRunning = false;
   gameOverScreen.style.display = "flex";
   scores.style.display = "none";
   gameArea.style.display = "none";
