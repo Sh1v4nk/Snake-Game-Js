@@ -29,7 +29,7 @@ let snake = {
 };
 
 function isMobileDevice() {
-  return window.matchMedia("(max-width: 768px)").matches;
+  return "ontouchstart" in window || navigator.msMaxTouchPoints;
 }
 
 function updateMobileControlsVisibility() {
