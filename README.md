@@ -1,6 +1,6 @@
 # SnakeXenzia
 
-Welcome to SnakeXenzia! Below, you'll find information about the SnakeXenzia game and how to contribute to this project.
+Greetings to SnakeXenzia! Below, you'll discover details about the SnakeXenzia game and instructions on how to play.
 
 ## Table of Contents
 
