@@ -4,7 +4,7 @@ Greetings to SnakeXenzia! Below, you'll discover details about the SnakeXenzia g
 
 ## Table of Contents
 
-- [About SnakeXenzia](#about-snakexenzia)
+- [About](#about)
 - [Features](#features)
 - [How to Play](#how-to-play)
 - [Installation](#installation)
