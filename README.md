@@ -9,7 +9,7 @@ Greetings to SnakeXenzia! Below, you'll discover details about the SnakeXenzia g
 - [How to Play](#how-to-play)
 - [Installation](#installation)
 - [Technologies Used](#technologies-used)
-- [Screenshots](#screenshots)
+- [Screenshot](#screenshot)
 - [Contributing](#contributing)
 
 ## About
@@ -51,7 +51,7 @@ git clone https://github.com/Sh1v4nk/SnakeXenzia.git
 - CSS
 - JavaScript
 
-## Screenshots
+## Screenshot
 
 <div align="center">
   <img src="https://i.ibb.co/9GhfPVN/snakexenzia.png" alt="SnakeXenzia">
