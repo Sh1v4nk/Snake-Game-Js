@@ -4,7 +4,7 @@ Greetings to SnakeXenzia! Below, you'll discover details about the SnakeXenzia g
 
 ## Table of Contents
 
-- [About](#about)
+- [Overview](#overview)
 - [Features](#features)
 - [How to Play](#how-to-play)
 - [Installation](#installation)
@@ -12,7 +12,7 @@ Greetings to SnakeXenzia! Below, you'll discover details about the SnakeXenzia g
 - [Screenshot](#screenshot)
 - [Contributing](#contributing)
 
-## About
+## Overview
 
 SnakeXenzia is a classic Snake game built using HTML, CSS, and JavaScript. The project aims to recreate the nostalgic experience of the iconic Snake Xenzia game, allowing users to relive the simple yet addictive gameplay.
 
