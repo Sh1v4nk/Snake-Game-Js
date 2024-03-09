@@ -53,10 +53,10 @@ function createGameElement(className) {
 }
 
 // Event listeners for mobile control buttons
-upButton.addEventListener("click", () => simulateKeyPress("ArrowUp"));
-downButton.addEventListener("click", () => simulateKeyPress("ArrowDown"));
-leftButton.addEventListener("click", () => simulateKeyPress("ArrowLeft"));
-rightButton.addEventListener("click", () => simulateKeyPress("ArrowRight"));
+upButton.addEventListener("click", () => simulateKeyPress("ArrowUp") || simulateKeyPress("w"));
+downButton.addEventListener("click", () => simulateKeyPress("ArrowDown") || simulateKeyPress("s"));
+leftButton.addEventListener("click", () => simulateKeyPress("ArrowLeft") || simulateKeyPress("a"));
+rightButton.addEventListener("click", () => simulateKeyPress("ArrowRight") || simulateKeyPress("d"));
 
 // Function to simulate a key press event
 function simulateKeyPress(key) {
@@ -75,12 +75,16 @@ function handleArrowKeys(e) {
     return;
   }
 
-  // Mapping arrow key inputs to directions
+  // Mapping arrow key and ASWD key inputs to directions
   const directions = {
     ArrowUp: { x: 0, y: -1 },
     ArrowDown: { x: 0, y: 1 },
     ArrowLeft: { x: -1, y: 0 },
     ArrowRight: { x: 1, y: 0 },
+    w: { x: 0, y: -1 },
+    s: { x: 0, y: 1 },
+    a: { x: -1, y: 0 },
+    d: { x: 1, y: 0 },
   };
 
   // Extracting the new direction based on the pressed key
