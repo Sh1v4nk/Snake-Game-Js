@@ -24,7 +24,7 @@ SnakeXenzia is a classic Snake game built using HTML, CSS, and JavaScript. The p
 
 **Score Tracking:** Keep track of your high score as you strive to beat your previous records.
 
-**Simple Controls:** Use arrow keys to control the snake's direction.
+**Simple Controls:** Use arrow keys or WASD buttons on keyboard to control the snake's direction.
 
 ## How to Play
 
