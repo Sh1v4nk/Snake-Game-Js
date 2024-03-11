@@ -87,6 +87,10 @@ function handleArrowKeys(e) {
     d: { x: 1, y: 0 },
   };
 
+  if(e.key === "p") {
+    togglePlayPause();
+  }
+  
   // Extracting the new direction based on the pressed key
   const newDirection = directions[e.key];
 
