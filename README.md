@@ -57,6 +57,8 @@ git clone https://github.com/Sh1v4nk/SnakeXenzia.git
   <img src="https://i.ibb.co/9GhfPVN/snakexenzia.png" alt="SnakeXenzia-1">
   <br>
   <img src="https://i.ibb.co/VqXhx87/image.png" alt="SnakeXenzia-2">
+  <br>
+  <img src="https://i.ibb.co/XsCkvz6/image.png" alt="SnakeXenzia-3">
 </div>
 
 ## 🤝 Contributing
