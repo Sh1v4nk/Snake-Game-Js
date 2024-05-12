@@ -12,11 +12,11 @@ Greetings to SnakeXenzia! Below, you'll discover details about the SnakeXenzia g
 - [Screenshot](#screenshot)
 - [Contributing](#contributing)
 
-## 🐍 Overview
+## Overview
 
 SnakeXenzia is a classic Snake game built using HTML, CSS, and JavaScript. The project aims to recreate the nostalgic experience of the iconic Snake Xenzia game, allowing users to relive the simple yet addictive gameplay.
 
-## 🎮 Features
+## Features
 
 **Classic Gameplay:** Experience the timeless joy of controlling a snake and eating food to grow longer.
 
@@ -26,14 +26,14 @@ SnakeXenzia is a classic Snake game built using HTML, CSS, and JavaScript. The p
 
 **Simple Controls:** Use `Arrow keys` or `WASD buttons` on keyboard to control the snake's direction.
 
-## 🎯 How to Play
+## How to Play
 
 1. Open [SnakeXenzia](https://sh1v4nk.github.io/SnakeXenzia/) in a web browser.
 2. Use **`Arrow Keys`** or **`WASD`** buttons to control the snake movement.
 3. Collect food to grow longer and increase your score.
 4. Avoid collisions with the snake's own body and the game borders.
 
-## 🔧 Installation
+##  Installation
 
 1. Clone the repository using the following command:
 
@@ -45,13 +45,13 @@ git clone https://github.com/Sh1v4nk/SnakeXenzia.git
 
 3. Alternatively, you can view a live demo of the [SnakeXenzia](https://sh1v4nk.github.io/SnakeXenzia/).
 
-## 💻 Technologies Used
+## Technologies Used
 
 - HTML
 - CSS
 - JavaScript
 
-## 📸 Screenshot
+## Screenshot
 
 <div align="center">
   <img src="https://i.ibb.co/9GhfPVN/snakexenzia.png" alt="SnakeXenzia-1">
@@ -61,7 +61,7 @@ git clone https://github.com/Sh1v4nk/SnakeXenzia.git
   <img src="https://i.ibb.co/XsCkvz6/image.png" alt="SnakeXenzia-3">
 </div>
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! If you'd like to contribute to SnakeXenzia, please follow these steps:
 
