@@ -30,8 +30,9 @@ SnakeXenzia is a classic Snake game built using HTML, CSS, and JavaScript. The p
 
 1. Open [SnakeXenzia](https://sh1v4nk.github.io/SnakeXenzia/) in a web browser.
 2. Use **`Arrow Keys`** or **`WASD`** buttons to control the snake movement.
-3. Collect food to grow longer and increase your score.
-4. Avoid collisions with the snake's own body and the game borders.
+3. Press **`Pause Button`** or **`P`** on the keyboard to pause the game.
+4. Collect food to grow longer and increase your score.
+5. Avoid collisions with the snake's own body and the game borders.
 
 ##  Installation
 
