@@ -26,6 +26,8 @@ SnakeXenzia is a classic Snake game built using HTML, CSS, and JavaScript. The p
 
 **Simple Controls:** Use `Arrow keys` or `WASD buttons` on keyboard to control the snake's direction.
 
+**Pause Feature:** Pause the game anytime using the `P` key or the `Pause button` for convenience.
+
 ## How to Play
 
 1. Open [SnakeXenzia](https://sh1v4nk.github.io/SnakeXenzia/) in a web browser.
