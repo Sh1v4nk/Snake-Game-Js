@@ -44,6 +44,10 @@ SnakeXenzia is a classic Snake game built using HTML, CSS, and JavaScript. The p
 git clone https://github.com/Sh1v4nk/SnakeXenzia.git
 ```
 
+```
+cd SnakeXenzia
+```
+
 2. Open the `index.html` file in your web browser.
 
 3. Alternatively, you can view a live demo of the [SnakeXenzia](https://sh1v4nk.github.io/SnakeXenzia/).
