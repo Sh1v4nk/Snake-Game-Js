@@ -75,6 +75,10 @@ Contributions are welcome! If you'd like to contribute to SnakeXenzia, please fo
 2. Create a new branch for your feature or bug fix.
 3. Make your changes and submit a pull request.
 
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/Sh1v4nk/SnakeXenzia/blob/main/LICENSE) file for details.
+
 ---
 
 Thank you for visiting my SnakeXenzia repository. If you have any suggestions or feedback, feel free to reach out to me.
