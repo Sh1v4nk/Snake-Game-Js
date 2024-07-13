@@ -11,6 +11,7 @@ Greetings to SnakeXenzia! Below, you'll discover details about the SnakeXenzia g
 - [Technologies Used](#technologies-used)
 - [Screenshot](#screenshot)
 - [Contributing](#contributing)
+- [License](#license)
 
 ## Overview
 
