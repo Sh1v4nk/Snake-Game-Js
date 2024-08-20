@@ -1,5 +1,7 @@
 # SnakeXenzia
 
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://choosealicense.com/licenses/mit/)
+
 Greetings to SnakeXenzia! Below, you'll discover details about the SnakeXenzia game and instructions on how to play.
 
 ## Table of Contents
