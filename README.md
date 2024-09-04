@@ -4,7 +4,7 @@
   
 # SnakeXenzia
 
-[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://choosealicense.com/licenses/mit/)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Sh1v4nk/SnakeXenzia)
 
 Greetings to SnakeXenzia! Below, you'll discover details about the SnakeXenzia game and instructions on how to play.
